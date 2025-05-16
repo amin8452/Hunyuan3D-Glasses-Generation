@@ -77,6 +77,30 @@ python show_metrics.py --detailed --save
 
 Toutes les données sont récupérées automatiquement depuis l'API Hunyuan3D. Aucune image locale n'est nécessaire.
 
+## Utilisation sur Kaggle
+
+Si vous utilisez ce projet sur Kaggle, suivez ces étapes:
+
+1. Clonez le dépôt et configurez l'environnement:
+
+```python
+!git clone https://github.com/amin8452/Hunyuan3D-Glasses-Generation.git
+%cd Hunyuan3D-Glasses-Generation
+!python kaggle_setup.py
+```
+
+2. Exécutez les commandes:
+
+```python
+!python generate_glasses.py --api
+!python show_results.py --type train
+!python show_results.py --type test
+!python show_results.py --type val
+!python show_metrics.py
+```
+
+Le script `kaggle_setup.py` vérifie que tous les fichiers nécessaires sont présents et crée les dossiers requis.
+
 ## Remarques
 
 - Les résultats d'entraînement, de test et de validation sont récupérés depuis l'API
